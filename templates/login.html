@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <center> <img src={{image}} width=800px; height=300px; style="border:3px solid #ece8e8;" > </center>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gift store - login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.html') }}">
+</head>
+<body>
+	<main>
+	<h1>Login</h1>
+	<form action="{{ url_for('view.login') }}" method="post">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username"><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="submit" value="Login">
+		<p class="form__text">
+			<a class="form__link" href="{{ url_for('view.registerpage') }}" id="linkCreateAccount">Don't have an account? Create account</a>
+		</p>
+	</form>
+	
+</main>
+</body>
+</html>
